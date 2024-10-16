@@ -69,12 +69,10 @@ SELECT CAST('24.423423' AS DECIMAL (10 , 6 ));
 SELECT date,DATE(date),TIME(date),MONTH(date),HOUR(date),
 MINUTE(date),SECOND(date) FROM hero_battles;
 
--- 3. Solve this question later
-
--- 4.
+-- 3.
 SELECT name, REPLACE(name, 'Batman', 'Batwoman') AS new_name FROM hero_battles
 WHERE name = 'Batman';
 
--- 5.
+-- 4.
 SELECT CONCAT('This battle occured at ',HOUR(date),' o\'clock') AS battle_timing
 FROM hero_battles;
