@@ -125,16 +125,16 @@ SELECT DISTINCT
     hi.name,
     MAX(hi.Height),
     MAX(hi.Weight),
-    shr.agility,
-    shr.jump
+    shp.agility,
+    shp.jump
 FROM
     heroes_information hi
         INNER JOIN
-    super_hero_powers shr ON hi.name = shr.hero_names
+    super_hero_powers shp ON hi.name = shp.hero_names
 WHERE
     hi.Gender = 'male'
-GROUP BY hi.name , shr.Agility , shr.Jump
-HAVING shr.Agility = 'true'
-    AND shr.jump = 'true'
+GROUP BY hi.name , shp.Agility , shp.Jump
+HAVING shp.Agility = 'true'
+    AND shp.jump = 'true'
 ORDER BY MAX(weight) DESC , MAX(Height) DESC
 LIMIT 1 OFFSET 1;
